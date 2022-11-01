@@ -1,14 +1,16 @@
 @extends('plantilla')
 @section('container')
 
-    @if (session()->has('success'))
-        {!! "<script>Swal.fire({
-        position: 'top-center',
-        icon: 'success'
-        title: Libro guardado',
-        showConfirmButton: false,
-        timer: 1500
-        })</script>" !!}
+
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                title: 'Libro guardado ',
+                text: '{{ session('success')['titulo'] }} guardado con exito',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            })
+        </script>
     @endif
 
 

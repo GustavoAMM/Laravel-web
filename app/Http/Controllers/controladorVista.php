@@ -11,7 +11,7 @@ class controladorVista extends Controller
     public function Procesarlibro(validadorFormulario $req)
     {
          $titulo = $req->input('txtTitulo');
-        return redirect()->route('registro')->with('success', 'Información correcta',compact('titulo'));
+        return redirect()->route('registro')->with('success',compact('titulo'));
         // return view('registro',['ProcesarLibro'=>'titulo']);
     }
 
