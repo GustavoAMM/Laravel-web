@@ -29,7 +29,7 @@ class validadorFormulario extends FormRequest
             'txtPaginas'=>'required|numeric',
             'txtEditorial'=>'required',
             'txtEmail'=>'required|email',
-            'txtIsbn'=>'numeric|required|min:13'
+            'txtIsbn'=>'required|min_digits:13|numeric'
         ];
     }
 }

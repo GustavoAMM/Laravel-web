@@ -9,4 +9,4 @@ Route::get('/',[controladorVista::class,'showPrincipal'])->name('principal');
 Route::get('registro',[controladorVista::class,'showRegistro'])->name('registro');
 
 
-Route::post('guardarLibro',[controladorVista::class,'Procesarlibro'])->name('saveLibro');
+Route::view('guardarLibro',[controladorVista::class,'Procesarlibro'])->name('saveLibro');
