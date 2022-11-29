@@ -38,18 +38,18 @@ class controladorBD extends Controller
      */
     public function store(validadorFormulario $request)
     {
-        return redirect('welcome');
-        // DB::table('tb_libro')->insert([
-        //     "isbn"=>$request->input('txtIsbn'),
-        //     "titulo"=>$request->input('txtTitulo'),
-        //     "autor"=>$request->input('txtAutor'),
-        //     "paginas"=>$request->input('txtPaginas'),
-        //     "editorial"=>$request->input('txtEditorial'),
-        //     "email"=>$request->input('txtEmail'),
-        //     "created_at"=>Carbon::now(),
-        //     "updated_at"=>Carbon::now(),
-        // ]);
-        // return redirect('libro/create')->with('confirmacion',"tu libro se guardo");
+        DB::table('tb_libro')->insert([
+            "isbn"=>$request->input('txtIsbn'),
+            "titulo"=>$request->input('txtTitulo'),
+            "autor"=>$request->input('txtAutor'),
+            "paginas"=>$request->input('txtPaginas'),
+            "editorial"=>$request->input('txtEditorial'),
+            "email"=>$request->input('txtEmail'),
+            "created_at"=>Carbon::now(),
+            "updated_at"=>Carbon::now(),
+        ]);
+        $titulo = $request->input('txtTitulo');
+        return redirect('libro/create')->with('confirmacion',compact('titulo'));
     }
 
     /**

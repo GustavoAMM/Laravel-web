@@ -31,9 +31,6 @@ class validadorFormulario extends FormRequest
             'txtPaginas' => 'required|numeric',
             'txtEditorial' => 'required',
             'txtEmail' => 'required|email',
-            
-            'txtNombre' => 'required|min:4|string',
-            'txtIne' => 'required|min_digits:10|numeric'
         ];
     }
 }

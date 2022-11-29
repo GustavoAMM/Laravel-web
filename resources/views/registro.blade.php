@@ -1,11 +1,11 @@
 @extends('plantilla')
 @section('container')
 
-    @if (session('success'))
+    @if (session('confirmacion'))
         <script>
             Swal.fire({
                 title: 'Libro guardado ',
-                text: '{{ session('success')['titulo'] }} guardado con exito',
+                text: '{{ session('confirmacion')['titulo'] }} guardado con exito',
                 icon: 'success',
                 confirmButtonText: 'Aceptar'
             })
@@ -26,7 +26,7 @@
             <div class="formulario">
                 <form method="POST" action="{{route('libro.store')}}">
                     @csrf
-                    <input type="text" name="txtIsbn" placeholder="ISBN" class="rounded border-primary"
+                    <input type="text" name="txtIsbn" placeholder="ISBN" class="rounded border-primary "
                         value={{ old('txtIsbn') }}><br>
                     <p class="text-danger fst-italic"> {{ $errors->first('txtIsbn') }} </p>
                     <input type="text" name="txtTitulo" placeholder="Titulo" class="rounded border-primary"
@@ -54,4 +54,4 @@
         </div>
     </div>
     <br>
-@endsection
+@stop
