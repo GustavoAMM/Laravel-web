@@ -27,6 +27,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="registro">Registro</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cliente">Cliente</a>
+              </li>
             </ul>
           </div>
         </div>
