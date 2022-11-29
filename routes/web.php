@@ -17,4 +17,6 @@ Route::get('libro/create',[controladorBD::class,'create'])->name('libro.create')
 //store
 route::post('libro', [ControladorBD::class, 'store'])->name('libro.store');
 //index
-Route::get('libro/index',[controladorBD::class,'index'])->name('libro.index');
+Route::get('libro',[controladorBD::class,'index'])->name('libro.index');
+//eliminar
+Route::delete('libro/{id}', [ControladorBD::class,'destroy'])->name('libro.delete');

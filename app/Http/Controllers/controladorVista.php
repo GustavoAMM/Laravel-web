@@ -14,10 +14,10 @@ class controladorVista extends Controller
     //     return redirect()->route('registro')->with('success',compact('titulo'));
     // }
 
-    // public function showPrincipal()
-    // {
-    //     return view('principal');
-    // }
+    public function showPrincipal()
+    {
+        return view('principal');
+    }
     // public function showRegistro()
     // {
     //     return view('registro');
