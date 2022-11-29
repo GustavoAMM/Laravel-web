@@ -22,10 +22,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Principal</a>
+                <a class="nav-link active" href="/">Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="registro">Registro</a>
+                <a class="nav-link" href="registro">Libro</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="cliente">Cliente</a>

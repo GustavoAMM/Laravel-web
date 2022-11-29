@@ -24,14 +24,16 @@ class validadorFormulario extends FormRequest
     public function rules()
     {
         return [
-            // 'txtTitulo'=>'required',
-            // 'txtAutor'=>'required',
-            // 'txtPaginas'=>'required|numeric',
-            // 'txtEditorial'=>'required',
-            'txtEmail'=>'required|email',
-            // 'txtIsbn'=>'required|min_digits:13|numeric',
-            'txtNombre'=>'required|min:4|string',
-            'txtIne'=>'required|min_digits:10|numeric'
+            //Requerimientos libro
+            'txtIsbn' => 'required|min_digits:13|numeric',
+            'txtTitulo' => 'required',
+            'txtAutor' => 'required',
+            'txtPaginas' => 'required|numeric',
+            'txtEditorial' => 'required',
+            'txtEmail' => 'required|email',
+            
+            'txtNombre' => 'required|min:4|string',
+            'txtIne' => 'required|min_digits:10|numeric'
         ];
     }
 }

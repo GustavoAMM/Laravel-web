@@ -10,7 +10,4 @@ Route::get('registro',[controladorVista::class,'showRegistro'])->name('registro'
 Route::get('cliente',[controladorVista::class,'showCliente'])->name('cliente');
 
 
-//Route::post('guardarLibro',[controladorVista::class,'Procesarlibro'])->name('saveLibro');
-Route::post('guardarLibro',[controladorVista::class,'Procesarlibro'])->name('saveCliente');
-
-//Route::post('guardarCliente',[controladorCliente::class,'ProcesarCliente'])->name('saveCliente');
+Route::post('guardarLibro',[controladorVista::class,'Procesarlibro'])->name('saveBook');
