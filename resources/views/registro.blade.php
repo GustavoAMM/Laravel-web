@@ -1,5 +1,6 @@
 @extends('plantilla')
 @section('container')
+
     @if (session('success'))
         <script>
             Swal.fire({
@@ -23,7 +24,7 @@
         <div class="card-body">
             <h5 class="card-title">Libro</h5>
             <div class="formulario">
-                <form action="{{ route('saveBook') }}" method="POST">
+                <form method="POST" action="{{route('libro.store')}}">
                     @csrf
                     <input type="text" name="txtIsbn" placeholder="ISBN" class="rounded border-primary"
                         value={{ old('txtIsbn') }}><br>

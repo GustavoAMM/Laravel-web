@@ -22,10 +22,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" href="/">Principal</a>
+                <a class="nav-link" href="/">Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="registro">Libro</a>
+                <a class="nav-link {{request()->routeIs('libro.create')?'text-primary':''}}" href="{{route('libro.create')}}">Libro</a>
+              </li>
+              <li>
+                <a class="nav-link {{request()->routeIs('libro.index')?'text-primary':''}}" href="{{route('libro.index')}}">Mis libros</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="cliente">Cliente</a>
