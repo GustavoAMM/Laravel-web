@@ -20,3 +20,5 @@ route::post('libro', [ControladorBD::class, 'store'])->name('libro.store');
 Route::get('libro',[controladorBD::class,'index'])->name('libro.index');
 //eliminar
 Route::delete('libro/{id}', [ControladorBD::class,'destroy'])->name('libro.delete');
+//put
+Route::put('libro/{id}', [ControladorBD::class,'update'])->name('libro.update');

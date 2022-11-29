@@ -83,7 +83,17 @@ class controladorBD extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::table('tb_libro')->where('idLibro',$id)->update([
+            "isbn"=>$request->input('txtIsbn'),
+            "titulo"=>$request->input('txtTitulo'),
+            "autor"=>$request->input('txtAutor'),
+            "paginas"=>$request->input('txtPaginas'),
+            "editorial"=>$request->input('txtEditorial'),
+            "email"=>$request->input('txtEmail'),
+            "updated_at"=>Carbon::now(),
+        ]);
+
+        return redirect('libro')->with('actualizado',"xx");
     }
 
     /**
