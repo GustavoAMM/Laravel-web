@@ -1,6 +1,7 @@
 @extends('plantilla')
 @section('container')
 @include('modalEliminarUser')
+@include('modalActualizarUser')
 @foreach ($resultadoCon as $consulta)
 <br>
 <div class="container col-md-6">

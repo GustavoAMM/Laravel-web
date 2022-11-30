@@ -23,3 +23,5 @@ Route::get('user/create',[controladorUser::class,'create'])->name('user.create')
 Route::get('user',[controladorUser::class,'index'])->name('user.index');
 //eliminar
 Route::delete('user/{id}', [controladorUser::class,'destroy'])->name('user.delete');
+//put
+Route::put('user/{id}', [controladorUser::class,'update'])->name('user.update');

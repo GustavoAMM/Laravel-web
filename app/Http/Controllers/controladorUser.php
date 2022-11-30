@@ -71,7 +71,14 @@ class controladorUser extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::table('tb_user')->where('Id_user',$id)->update([
+            "Name"=>$request->input('txtName'),
+            "email"=>$request->input('txtEmail'),
+            "ine"=>$request->input('txtIne'),
+            "updated_at"=>Carbon::now(),
+        ]);
+
+        return redirect('user')->with('actualizado',"xx");
     }
 
     /**
