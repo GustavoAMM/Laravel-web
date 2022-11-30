@@ -39,7 +39,7 @@
                                             value="{{ $consulta->editorial }}">
                                         <p class="text-danger fst-italic"> {{ $errors->first('txtEditorial') }}</p>
                                     </div>
-                                    <div >
+                                    <div>
                                         <label class="form-label">Email:</label>
                                         <input type="text" class="form-control mg-4" name="txtEmail"
                                             value="{{ $consulta->email }}">
@@ -56,13 +56,13 @@
                         </div>
                     </div>
                 </div>
-            
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Actualizar</button>
-                </form>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                    </form>
+                </div>
             </div>
-        </div>
         </div>
     </div>
 @endforeach

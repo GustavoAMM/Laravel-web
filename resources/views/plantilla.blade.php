@@ -22,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/">Principal</a>
+                <a class="nav-link {{request()->routeIs('principal')?'text-primary':''}}" href="/">Principal</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {{request()->routeIs('libro.create')?'text-primary':''}}" href="{{route('libro.create')}}">Libro</a>
@@ -31,7 +31,10 @@
                 <a class="nav-link {{request()->routeIs('libro.index')?'text-primary':''}}" href="{{route('libro.index')}}">Mis libros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="cliente">Cliente</a>
+                <a class="nav-link {{request()->routeIs('user.create')?'text-primary':''}}" href="{{route('user.create')}}">Cliente</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{request()->routeIs('user.index')?'text-primary':''}}" href="{{route('user.index')}}">クライアント</a>
               </li>
             </ul>
           </div>

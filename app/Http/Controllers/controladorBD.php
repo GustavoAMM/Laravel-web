@@ -96,6 +96,10 @@ class controladorBD extends Controller
         return redirect('libro')->with('actualizado',"xx");
     }
 
+    public function showPrincipal()
+    {
+        return view('principal');
+    }
     /**
      * Remove the specified resource from storage.
      *

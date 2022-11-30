@@ -1,17 +1,11 @@
 <?php
 
-use App\Http\Controllers\controladorVista;
 use App\Http\Controllers\controladorBD;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controladorUser;
 
-
-
- Route::get('/',[controladorVista::class,'showPrincipal'])->name('principal');
- Route::get('registro',[controladorVista::class,'showRegistro'])->name('registro');
- Route::get('libro/cliente',[controladorVista::class,'showCliente'])->name('cliente');
- Route::post('guardarLibro',[controladorVista::class,'Procesarlibro'])->name('saveBook');
-
-//Rutas
+//Rutas del libro Libro
+Route::get('/',[controladorBD::class,'showPrincipal'])->name('principal');
 // show Registro 
 Route::get('libro/create',[controladorBD::class,'create'])->name('libro.create');
 //store
@@ -22,3 +16,8 @@ Route::get('libro',[controladorBD::class,'index'])->name('libro.index');
 Route::delete('libro/{id}', [ControladorBD::class,'destroy'])->name('libro.delete');
 //put
 Route::put('libro/{id}', [ControladorBD::class,'update'])->name('libro.update');
+
+// Rutas de usuario
+Route::get('user/create',[controladorUser::class,'create'])->name('user.create');
+//index
+Route::get('user',[controladorUser::class,'index'])->name('user.index');
