@@ -82,6 +82,7 @@ class controladorUser extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('tb_user')->where('Id_user',$id)->delete();
+        return redirect('user')->with('Eliminacion',"abc");
     }
 }

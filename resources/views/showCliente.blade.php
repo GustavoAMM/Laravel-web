@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('container')
-
+@include('modalEliminarUser')
 @foreach ($resultadoCon as $consulta)
 <br>
 <div class="container col-md-6">
@@ -12,8 +12,14 @@
         <h6>Ine: {{$consulta->ine}}</h6>
     </div>
     <div class="card-footer">
+         <!-- Button trigger modal -->
+         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalactualizar{{$consulta->Id_user}}">
+            Actualizar
+        </button>
         <!-- Button trigger modal -->
-       
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modaleliminar{{ $consulta->Id_user }}">
+            Eliminar
+        </button>
     </div>
 </div>
 <br>

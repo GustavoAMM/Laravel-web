@@ -21,3 +21,5 @@ Route::put('libro/{id}', [ControladorBD::class,'update'])->name('libro.update');
 Route::get('user/create',[controladorUser::class,'create'])->name('user.create');
 //index
 Route::get('user',[controladorUser::class,'index'])->name('user.index');
+//eliminar
+Route::delete('user/{id}', [ControladorBD::class,'destroy'])->name('user.delete');
