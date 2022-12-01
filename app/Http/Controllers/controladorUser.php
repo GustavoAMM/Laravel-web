@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use DB;
+
+use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
 use Illuminate\Http\Request;
@@ -31,8 +32,7 @@ class controladorUser extends Controller
             "created_at" => Carbon::now(),
             "updated_at" => Carbon::now(),
         ]);
-        $name = $request->input('txtTitulo');
-        return redirect('user/create')->with('confirmacion', compact('name'));
+        return redirect('user/create')->with('confirmacion', "xx");
     }
 
     public function show($id)
