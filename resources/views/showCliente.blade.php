@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,22 +16,22 @@
 
 <body class="">
     @include('modalEliminarUser')
-@include('modalActualizarUser')
+    @include('modalActualizarUser')
 
-@if (session()->has('Eliminacion'))
-    {!! "<script>Swal.fire(
-                                        'Correcto',
-                                        'Usuario eliminado',
-                                        'success'
-                                    )</script>" !!}
-@endif
-@if (session()->has('actualizado'))
-    {!! "<script>Swal.fire(
-                                    'Correcto',
-                                    'Usuario actualizado',
-                                    'success'
-                                )</script>" !!}
-@endif
+    @if (session()->has('Eliminacion'))
+        {!! "<script>Swal.fire(
+                                                'Correcto',
+                                                'Usuario eliminado',
+                                                'success'
+                                            )</script>" !!}
+    @endif
+    @if (session()->has('actualizado'))
+        {!! "<script>Swal.fire(
+                                            'Correcto',
+                                            'Usuario actualizado',
+                                            'success'
+                                        )</script>" !!}
+    @endif
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
@@ -69,7 +68,7 @@
     </nav>
 
     <br>
-    <div class="row row-cols-1 row-cols-md-3 g-4 px-5" >
+    <div class="row row-cols-1 row-cols-md-3 g-4 px-5">
         @foreach ($resultadoCon as $consulta)
             <div class="col">
                 <div class="px-50">
@@ -109,6 +108,7 @@
     </footer>
 
 </body>
+
 </html>
 
 
