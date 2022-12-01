@@ -81,7 +81,7 @@ class controladorBD extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(validadorFormulario $request, $id)
     {
         DB::table('tb_libro')->where('idLibro',$id)->update([
             "isbn"=>$request->input('txtIsbn'),
