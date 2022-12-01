@@ -12,15 +12,15 @@
     @endif
 
     <br>
-    <div class="card text-center ">
-        <div class="card-header">
+    <div class="card text-center my-5">
+        <div class="card-header bg-dark text-white">
             Registro
         </div>
 
-        <div class="card-body">
+        <div class="card-body bg-secondary">
             <h5 class="card-title">Cliente</h5>
-            <p class="card-text">Llenar los campos para registrar un nuevo cliente</p>
-            <div class="formulario">
+            <div class="formulario bg-secondary">
+                <br>
                 <form action="{{ route('user.store') }}" method="POST">
                     @csrf
                     <input type="text" name="txtNombre" placeholder="Nombre" class="rounded border-primary"
@@ -39,7 +39,7 @@
                 </form>
             </div>
         </div>
-        <div class="card-footer text-muted">
+        <div class="card-footer bg-dark">
             <br>
         </div>
     </div>

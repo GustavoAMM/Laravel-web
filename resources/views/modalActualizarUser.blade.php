@@ -6,7 +6,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Actualizar Recuerdo</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Actualizar usuario</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -14,9 +14,6 @@
                     <div class="container col-md-6">
                         <div class="card text-center mb-5">
 
-                            <div class="card-header">
-                                Fe de erratas !!!
-                            </div>
 
                             <div class="card-body">
                                 <form method="POST" action="{{ route('user.update', $consulta->Id_user) }}">

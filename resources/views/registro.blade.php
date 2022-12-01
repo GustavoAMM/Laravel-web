@@ -17,11 +17,11 @@
     <br>
 
     <div class="card text-center ">
-        <div class="card-header">
+        <div class="card-header  bg-dark text-white">
             Registro
         </div>
 
-        <div class="card-body">
+        <div class="card-body bg-secondary">
             <h5 class="card-title">Libro</h5>
             <div class="formulario">
                 <form method="POST" action="{{route('libro.store')}}">
@@ -49,7 +49,7 @@
                 </form>
             </div>
         </div>
-        <div class="card-footer text-muted">
+        <div class="card-footer text-muted bg-dark">
             <br>
         </div>
     </div>
