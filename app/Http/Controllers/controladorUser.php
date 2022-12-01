@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class controladorUser extends Controller
 {
-  
+
     public function index()
     {
         $resultadoCon = DB::table('tb_user')->get();
@@ -21,10 +21,18 @@ class controladorUser extends Controller
         return view('cliente');
     }
 
-    
+
     public function store(Request $request)
     {
-        //
+        DB::table('tb_user')->insert([
+            "Name" => $request->input('txtNombre'),
+            "email" => $request->input('txtEmail'),
+            "ine" => $request->input('txtIne'),
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
+        ]);
+        $name = $request->input('txtTitulo');
+        return redirect('user/create')->with('confirmacion', compact('name'));
     }
 
     public function show($id)

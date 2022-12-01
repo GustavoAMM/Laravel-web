@@ -25,3 +25,5 @@ Route::get('user',[controladorUser::class,'index'])->name('user.index');
 Route::delete('user/{id}', [controladorUser::class,'destroy'])->name('user.delete');
 //put
 Route::put('user/{id}', [controladorUser::class,'update'])->name('user.update');
+//insertar usuario
+Route::post('user',[controladorUser::class,'store'])->name('user.store');

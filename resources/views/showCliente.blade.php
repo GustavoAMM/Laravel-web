@@ -6,14 +6,14 @@
     @if (session()->has('Eliminacion'))
         {!! "<script>Swal.fire(
                         'Correcto',
-                        'Libro eliminado',
+                        'Usuario eliminado',
                         'success'
                     )</script>" !!}
     @endif
     @if (session()->has('actualizado'))
         {!! "<script>Swal.fire(
                     'Correcto',
-                    'Usuario Actualizado',
+                    'Usuario actualizado',
                     'success'
                 )</script>" !!}
     @endif
