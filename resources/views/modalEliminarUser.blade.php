@@ -5,13 +5,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Eliminar libro</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Eliminar usuario</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <h6>Nombre: {{ $consulta->Name }}</h6>
-                    <h6>ISBN: {{ $consulta->email }}</h6>
-                    <h6>Autor: {{ $consulta->ine }}</h6>
+                    <h6>Email: {{ $consulta->email }}</h6>
+                    <h6>Ine: {{ $consulta->ine }}</h6>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
