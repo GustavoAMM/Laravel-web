@@ -24,7 +24,7 @@ class validadorCliente extends FormRequest
     public function rules()
     {
         return [
-            'txtNombre'=>'required',
+            'txtName'=>'required',
             'txtEmail'=>'required',
             'txtIne'=>'required'
         ];

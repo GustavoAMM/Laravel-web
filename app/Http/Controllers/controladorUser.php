@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Requests\validadorUser;
+
+use App\Http\Requests\validadorCliente;
+
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
@@ -22,7 +24,9 @@ class controladorUser extends Controller
     }
 
 
-    public function store(validadorUser $request)
+
+    public function store(validadorCliente $request)
+
     {
         DB::table('tb_user')->insert([
             "Name" => $request->input('txtNombre'),
@@ -44,7 +48,7 @@ class controladorUser extends Controller
         //
     }
 
-    public function update(Request $request, $id)
+    public function update(validadorCliente $request, $id)
     {
         DB::table('tb_user')->where('Id_user', $id)->update([
             "Name" => $request->input('txtName'),
