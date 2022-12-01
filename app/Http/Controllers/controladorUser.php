@@ -26,7 +26,7 @@ class controladorUser extends Controller
     public function store(validadorCliente $request)
     {
         DB::table('tb_user')->insert([
-            "Name" => $request->input('txtNombre'),
+            "Name" => $request->input('txtName'),
             "email" => $request->input('txtEmail'),
             "ine" => $request->input('txtIne'),
             "created_at" => Carbon::now(),

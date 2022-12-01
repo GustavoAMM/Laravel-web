@@ -23,9 +23,9 @@
                 <br>
                 <form action="{{ route('user.store') }}" method="POST">
                     @csrf
-                    <input type="text" name="txtNombre" placeholder="Nombre" class="rounded border-primary"
-                        value={{ old('txtNombre') }}><br>
-                    <p class="text-danger fst-italic"> {{ $errors->first('txtNombre') }} </p>
+                    <input type="text" name="txtName" placeholder="Nombre" class="rounded border-primary"
+                        value={{ old('txtName') }}><br>
+                    <p class="text-danger fst-italic"> {{ $errors->first('txtName') }} </p>
 
                     <input type="text" name="txtEmail" placeholder="Email" class="rounded border-primary"
                         value={{ old('txtEmail') }}><br>

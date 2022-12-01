@@ -24,9 +24,9 @@ class validadorCliente extends FormRequest
     public function rules()
     {
         return [
-            'txtName'=>'required',
-            'txtEmail'=>'required',
-            'txtIne'=>'required'
+            'txtName'=>'required|string|min:4',
+            'txtEmail'=>'required|email',
+            'txtIne'=>'required|numeric|min_digits:10'
         ];
     }
 }
